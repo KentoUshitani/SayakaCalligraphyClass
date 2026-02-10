@@ -11,6 +11,13 @@
   body {
     @apply font-sans bg-kinari text-sumi;
     line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-kaede/20 text-sumi;
   }
 }
 
