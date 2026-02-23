@@ -16,7 +16,7 @@ export default function Footer() {
                                 清楓習字教室
                             </h3>
                             <p className="text-xs sm:text-sm md:text-base text-white/60 uppercase tracking-wider">
-                                SEIFU CALLIGRAPHY
+                                SAYAKA CALLIGRAPHY
                             </p>
                             <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
                                 字を書くと、心は「無」になる。<br />

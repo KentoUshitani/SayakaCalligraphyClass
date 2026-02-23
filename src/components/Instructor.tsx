@@ -20,7 +20,7 @@ export default function Instructor() {
                             <div className="relative">
                                 <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg">
                                     <img
-                                        src="/instructor.jpg"
+                                        src="/images/instructor-new.jpg"
                                         alt="講師 牛谷日出心"
                                         className="w-full h-full object-cover"
                                     />
@@ -42,11 +42,21 @@ export default function Instructor() {
                             <div className="w-16 h-0.5 bg-kaede rounded-full mx-auto md:mx-0"></div>
 
                             <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
-                                書く楽しさ、成長する喜びを<br />
-                                伝え続けて30年。<br />
-                                あなたの字が美しく変わる瞬間、<br />
-                                そして表情が輝く瞬間を見るのが<br />
-                                私の喜びです。
+                                「先生、昔から字がお上手だったんでしょう？」<br />
+                                よくそう聞かれますが、実は小学生の頃は<br />
+                                「字が雑」と怒られるような子供でした。
+                            </p>
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                                転機は小学3年生。教室で「上手だね」と<br />
+                                褒められたことで自信がつき、<br />
+                                性格まで明るくなりました。
+                            </p>
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                                指導歴30年。私が大切にしているのは<br />
+                                「教えるのではなく、引き出す」こと。<br />
+                                ダメなところを直すのではなく、<br />
+                                その人だけが持つ「良いところ」を見つけ、<br />
+                                光を当てるのが私の役目です。
                             </p>
 
                             <ul className="space-y-2 text-sm sm:text-base text-sumi/70">

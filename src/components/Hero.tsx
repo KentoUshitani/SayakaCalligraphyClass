@@ -41,20 +41,64 @@ export default function Hero() {
                         </p>
                     </div>
 
-                    {/* CTA Button */}
+                    {/* Campaign Banner */}
                     <motion.div
-                        className="pt-4 sm:pt-6"
+                        className="mt-6 sm:mt-8"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <a
-                            href="https://www.instagram.com/sayakaclass0506"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block px-8 sm:px-10 py-3.5 sm:py-4 bg-kaede text-white text-base sm:text-lg font-medium rounded-full hover:bg-kaede/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                        >
-                            教室の様子を見る
+                        <div className="bg-white/80 backdrop-blur-sm border-2 border-kaede/30 rounded-xl px-5 sm:px-8 py-5 sm:py-6 text-center space-y-2.5">
+                            <p className="text-xs sm:text-sm text-sumi/60 font-medium">
+                                ＼ 日本最大の書道団体「日本習字」／
+                            </p>
+                            <p className="text-lg sm:text-xl font-bold text-kaede">
+                                🌸 春の入会キャンペーン実施中 🌸
+                            </p>
+                            <p className="text-sm sm:text-base text-sumi/80 font-medium leading-relaxed">
+                                今ご入会いただくと
+                                <br />
+                                「習字道具一式（最大8,000円相当）」プレゼント！
+                                <br />
+                                手ぶらでスタートできるチャンスです。
+                            </p>
+                            <div className="pt-1 space-y-1.5">
+                                <p className="text-xs text-sumi/50 leading-relaxed">
+                                    ※日本習字にご入会の場合、入会金のほかに会費（手本代）が発生します。
+                                    <br />
+                                    詳細は日本習字の公式サイトをご確認ください。
+                                </p>
+                                <a
+                                    href="https://www.nihon-shuji.or.jp/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block text-xs sm:text-sm text-kaede hover:text-kaede/80 font-medium underline underline-offset-2 transition-colors duration-300"
+                                >
+                                    日本習字公式サイトはこちら
+                                </a>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* LINE CTA */}
+                    <motion.div
+                        className="text-center md:text-left space-y-3"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
+                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                            まずはLINEでお気軽にご相談・
+                            <br className="sm:hidden" />
+                            単発レッスン（1回1,500円）のお申し込みを！
+                        </p>
+                        <a href="https://lin.ee/edtrcMJ" className="inline-block">
+                            <img
+                                src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+                                alt="友だち追加"
+                                height="36"
+                                className="h-9 sm:h-10"
+                            />
                         </a>
                     </motion.div>
                 </motion.div>
@@ -68,11 +112,10 @@ export default function Hero() {
                 >
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src="/calligraphy-hero.png"
-                            alt="書道作品 - 清楓習字教室"
+                            src="/images/calligraphy-main.jpg"
+                            alt="清楓習字教室 - 講師の書道作品"
                             className="w-full h-auto object-cover"
                         />
-                        {/* Subtle overlay for depth */}
                         <div className="absolute inset-0 bg-gradient-to-t from-sumi/10 to-transparent"></div>
                     </div>
 

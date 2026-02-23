@@ -4,8 +4,13 @@ import Hero from '../components/Hero';
 import Philosophy from '../components/Philosophy';
 import Benefits from '../components/Benefits';
 import Credentials from '../components/Credentials';
+import Voices from '../components/Voices';
 import Services from '../components/Services';
+import AccessSchedule from '../components/AccessSchedule';
+import OnlineLesson from '../components/OnlineLesson';
 import Instructor from '../components/Instructor';
+import FAQ from '../components/FAQ';
+import FloatingLineCTA from '../components/FloatingLineCTA';
 import Footer from '../components/Footer';
 import '../styles/global.css';
 ---
@@ -44,11 +49,26 @@ import '../styles/global.css';
       <div id="credentials">
         <Credentials client:visible />
       </div>
+      <div id="voices">
+        <Voices client:visible />
+      </div>
       <div id="classes">
         <Services client:visible />
       </div>
-      <Instructor client:visible />
+      <div id="access">
+        <AccessSchedule client:visible />
+      </div>
+      <div id="online">
+        <OnlineLesson client:visible />
+      </div>
+      <div id="instructor">
+        <Instructor client:visible />
+      </div>
+      <div id="faq">
+        <FAQ client:visible />
+      </div>
     </main>
     <Footer client:visible />
+    <FloatingLineCTA client:load />
   </body>
 </html>
