@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { translations, t, type Lang } from '../i18n/utils';
+import { translations, t, TB, type Lang } from '../i18n/utils';
 
 export default function Hero({ lang = 'ja' as Lang }) {
     const s = translations.hero;
@@ -38,8 +38,8 @@ export default function Hero({ lang = 'ja' as Lang }) {
                         <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 font-medium">
                             {t(s.schoolName, lang)}
                         </p>
-                        <p className="text-base sm:text-lg md:text-xl text-sumi/60 leading-relaxed whitespace-pre-line">
-                            {t(s.desc, lang)}
+                        <p className="text-base sm:text-lg md:text-xl text-sumi/60 leading-relaxed">
+                            <TB text={s.desc} lang={lang} />
                         </p>
                     </div>
 
@@ -57,12 +57,12 @@ export default function Hero({ lang = 'ja' as Lang }) {
                             <p className="text-lg sm:text-xl font-bold text-kaede">
                                 {t(s.campaignTitle, lang)}
                             </p>
-                            <p className="text-sm sm:text-base text-sumi/80 font-medium leading-relaxed whitespace-pre-line">
-                                {t(s.campaignDesc, lang)}
+                            <p className="text-sm sm:text-base text-sumi/80 font-medium leading-relaxed">
+                                <TB text={s.campaignDesc} lang={lang} />
                             </p>
                             <div className="pt-1 space-y-1.5">
-                                <p className="text-xs text-sumi/50 leading-relaxed whitespace-pre-line">
-                                    {t(s.campaignNote, lang)}
+                                <p className="text-xs text-sumi/50 leading-relaxed">
+                                    <TB text={s.campaignNote} lang={lang} />
                                 </p>
                                 <a
                                     href="https://www.nihon-shuji.or.jp/"
@@ -83,8 +83,8 @@ export default function Hero({ lang = 'ja' as Lang }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed whitespace-pre-line">
-                            {t(s.ctaText, lang)}
+                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                            <TB text={s.ctaText} lang={lang} />
                         </p>
                         <a href="https://lin.ee/edtrcMJ" className="inline-block">
                             <img

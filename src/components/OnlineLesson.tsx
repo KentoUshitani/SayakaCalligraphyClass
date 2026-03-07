@@ -1,6 +1,6 @@
 import { Smartphone, Send, PlayCircle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { translations, t, type Lang } from '../i18n/utils';
+import { translations, t, TB, type Lang } from '../i18n/utils';
 
 const stepIcons = [Smartphone, Send, PlayCircle];
 
@@ -15,8 +15,8 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                     <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sumi leading-tight whitespace-pre-line">
-                        {t(s.title, lang)}
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sumi leading-tight">
+                        <TB text={s.title} lang={lang} />
                     </h2>
                 </AnimatedSection>
 
@@ -26,8 +26,8 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                         <p className="text-base sm:text-lg text-sumi/70 leading-relaxed">
                             {t(s.desc, lang)}
                         </p>
-                        <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
-                            {t(s.noPC, lang)}
+                        <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                            <TB text={s.noPC} lang={lang} />
                         </p>
                     </div>
                 </AnimatedSection>
@@ -51,8 +51,8 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                             </li>
                         </ul>
                         <div className="bg-kaede/5 rounded-lg px-4 py-3">
-                            <p className="text-sm sm:text-base text-sumi/80 font-medium whitespace-pre-line">
-                                {t(sv.adult.parentDiscount, lang)}<strong className="text-kaede">{t(sv.adult.parentPrice, lang)}</strong>
+                            <p className="text-sm sm:text-base text-sumi/80 font-medium">
+                                <TB text={sv.adult.parentDiscount} lang={lang} /><strong className="text-kaede">{t(sv.adult.parentPrice, lang)}</strong>
                                 {lang === 'ja' ? 'に' : ''}
                             </p>
                             <p className="text-xs text-sumi/50 mt-1">
@@ -94,8 +94,8 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                 {/* LINE CTA */}
                 <AnimatedSection className="text-center mt-10 sm:mt-12">
                     <div className="space-y-3">
-                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed whitespace-pre-line">
-                            {t(s.cta, lang)}
+                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                            <TB text={s.cta} lang={lang} />
                         </p>
                         <a href="https://lin.ee/edtrcMJ" className="inline-block">
                             <img

@@ -1,6 +1,6 @@
 import { Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { translations, t, type Lang } from '../i18n/utils';
+import { translations, t, TB, type Lang } from '../i18n/utils';
 
 export default function Footer({ lang = 'ja' as Lang }) {
     const s = translations.footer;
@@ -22,8 +22,8 @@ export default function Footer({ lang = 'ja' as Lang }) {
                             <p className="text-xs sm:text-sm md:text-base text-white/60 uppercase tracking-wider">
                                 SAYAKA CALLIGRAPHY
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
-                                {t(s.tagline, lang)}
+                            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                                <TB text={s.tagline} lang={lang} />
                             </p>
                         </div>
 

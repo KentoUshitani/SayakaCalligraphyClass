@@ -1,6 +1,6 @@
 import { School, Users, Crosshair, GraduationCap, PenTool, Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { translations, t, type Lang } from '../i18n/utils';
+import { translations, t, TB, type Lang } from '../i18n/utils';
 
 export default function Services({ lang = 'ja' as Lang }) {
     const s = translations.services;
@@ -58,8 +58,8 @@ export default function Services({ lang = 'ja' as Lang }) {
                                     </div>
                                 </div>
                                 <div className="border-t border-sumi/10 pt-4">
-                                    <p className="text-sm sm:text-base text-sumi/70 leading-relaxed whitespace-pre-line">
-                                        {t(s.student.desc, lang)}
+                                    <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                                        <TB text={s.student.desc} lang={lang} />
                                     </p>
                                 </div>
                             </div>
@@ -104,8 +104,8 @@ export default function Services({ lang = 'ja' as Lang }) {
                                         </li>
                                     </ul>
                                     <div className="bg-kaede/5 rounded-lg px-4 py-3">
-                                        <p className="text-sm sm:text-base text-sumi/80 font-medium whitespace-pre-line">
-                                            {t(s.adult.parentDiscount, lang)}<strong className="text-kaede">{t(s.adult.parentPrice, lang)}</strong>
+                                        <p className="text-sm sm:text-base text-sumi/80 font-medium">
+                                            <TB text={s.adult.parentDiscount} lang={lang} /><strong className="text-kaede">{t(s.adult.parentPrice, lang)}</strong>
                                             {lang === 'ja' ? 'に' : ''}
                                         </p>
                                         <p className="text-xs text-sumi/50 mt-1">
@@ -215,8 +215,8 @@ export default function Services({ lang = 'ja' as Lang }) {
                 {/* LINE CTA for Classes */}
                 <AnimatedSection className="text-center mb-12 sm:mb-16" delay={0.3}>
                     <div className="space-y-3">
-                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed whitespace-pre-line">
-                            {t(s.classCta, lang)}
+                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                            <TB text={s.classCta} lang={lang} />
                         </p>
                         <a href="https://lin.ee/edtrcMJ" className="inline-block">
                             <img
@@ -246,8 +246,8 @@ export default function Services({ lang = 'ja' as Lang }) {
                                 <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto bg-kaede/10 rounded-full flex items-center justify-center">
                                     <PenTool className="w-7 h-7 sm:w-8 sm:h-8 text-kaede" />
                                 </div>
-                                <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
-                                    {t(s.commission.desc, lang)}
+                                <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                                    <TB text={s.commission.desc} lang={lang} />
                                 </p>
                             </div>
 

@@ -1,5 +1,5 @@
 import AnimatedSection from './AnimatedSection';
-import { translations, t, type Lang } from '../i18n/utils';
+import { translations, t, TB, type Lang } from '../i18n/utils';
 
 export default function Instructor({ lang = 'ja' as Lang }) {
     const s = translations.instructor;
@@ -46,14 +46,14 @@ export default function Instructor({ lang = 'ja' as Lang }) {
 
                             <div className="w-16 h-0.5 bg-kaede rounded-full mx-auto md:mx-0"></div>
 
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
-                                {t(s.p1, lang)}
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                                <TB text={s.p1} lang={lang} />
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
-                                {t(s.p2, lang)}
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                                <TB text={s.p2} lang={lang} />
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
-                                {t(s.p3, lang)}
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                                <TB text={s.p3} lang={lang} />
                             </p>
 
                             <ul className="space-y-2 text-sm sm:text-base text-sumi/70">

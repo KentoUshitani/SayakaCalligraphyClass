@@ -1,5 +1,5 @@
 import AnimatedSection from './AnimatedSection';
-import { translations, t, type Lang } from '../i18n/utils';
+import { translations, t, TB, type Lang } from '../i18n/utils';
 
 export default function Philosophy({ lang = 'ja' as Lang }) {
     const s = translations.philosophy;
@@ -37,8 +37,8 @@ export default function Philosophy({ lang = 'ja' as Lang }) {
 
                         {/* Content */}
                         <div className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed space-y-4 sm:space-y-6">
-                            <p className="whitespace-pre-line">{t(s.p1, lang)}</p>
-                            <p className="whitespace-pre-line">{t(s.p2, lang)}</p>
+                            <p><TB text={s.p1} lang={lang} /></p>
+                            <p><TB text={s.p2} lang={lang} /></p>
                         </div>
                     </AnimatedSection>
                 </div>
