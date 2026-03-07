@@ -31,7 +31,7 @@ export default function Header({ lang = 'ja' as Lang }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href={currentLang.path} className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-sumi hover:text-kaede transition-colors duration-300">
+          <a href={currentLang.path} className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sumi hover:text-kaede transition-colors duration-300">
             {t(s.logo, lang)}
           </a>
         </div>

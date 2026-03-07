@@ -11,10 +11,10 @@ export default function Benefits({ lang = 'ja' as Lang }) {
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-kinari-dark">
             <div className="max-w-7xl mx-auto">
                 <AnimatedSection className="text-center mb-12 sm:mb-16">
-                    <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                    <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-sumi">
                         {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
@@ -28,10 +28,10 @@ export default function Benefits({ lang = 'ja' as Lang }) {
                                     <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto bg-kaede/10 rounded-full flex items-center justify-center">
                                         <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-kaede" />
                                     </div>
-                                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-sumi">
+                                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-sumi">
                                         {t(benefit.title, lang)}
                                     </h3>
-                                    <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                                    <p className="text-base sm:text-lg text-sumi/70 leading-relaxed">
                                         {t(benefit.description, lang)}
                                     </p>
                                 </div>

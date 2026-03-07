@@ -8,10 +8,10 @@ export default function Instructor({ lang = 'ja' as Lang }) {
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-5xl mx-auto">
                 <AnimatedSection className="text-center mb-10 sm:mb-12">
-                    <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                    <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-sumi">
                         {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
@@ -36,27 +36,27 @@ export default function Instructor({ lang = 'ja' as Lang }) {
                         {/* Right: Info */}
                         <div className="md:col-span-3 text-center md:text-left space-y-5 sm:space-y-6">
                             <div>
-                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sumi">
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
                                     {t(s.name, lang)}
                                 </h3>
                                 {t(s.nameRomaji, lang) && (
-                                    <p className="text-lg sm:text-xl text-sumi/50 mt-1">{t(s.nameRomaji, lang)}</p>
+                                    <p className="text-xl sm:text-2xl text-sumi/50 mt-1">{t(s.nameRomaji, lang)}</p>
                                 )}
                             </div>
 
                             <div className="w-16 h-0.5 bg-kaede rounded-full mx-auto md:mx-0"></div>
 
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                            <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 leading-relaxed">
                                 <TB text={s.p1} lang={lang} />
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                            <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 leading-relaxed">
                                 <TB text={s.p2} lang={lang} />
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                            <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 leading-relaxed">
                                 <TB text={s.p3} lang={lang} />
                             </p>
 
-                            <ul className="space-y-2 text-sm sm:text-base text-sumi/70">
+                            <ul className="space-y-2 text-base sm:text-lg text-sumi/70">
                                 {[s.cred1, s.cred2, s.cred3, s.cred4].map((cred, i) => (
                                     <li key={i} className="flex items-center gap-2 justify-center md:justify-start">
                                         <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0"></span>

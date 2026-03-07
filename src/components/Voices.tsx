@@ -11,10 +11,10 @@ export default function Voices({ lang = 'ja' as Lang }) {
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-5xl mx-auto">
                 <AnimatedSection className="text-center mb-12 sm:mb-16">
-                    <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                    <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-sumi">
                         {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
@@ -35,15 +35,15 @@ export default function Voices({ lang = 'ja' as Lang }) {
                                 <div className="p-6 sm:p-8 space-y-4">
                                     <div className="flex items-center gap-2">
                                         <MessageCircle className="w-5 h-5 text-kaede flex-shrink-0" />
-                                        <span className="text-sm sm:text-base font-bold text-kaede">
+                                        <span className="text-base sm:text-lg font-bold text-kaede">
                                             {t(voice.label, lang)}
                                         </span>
-                                        <span className="text-xs sm:text-sm text-sumi/50">
+                                        <span className="text-sm sm:text-base text-sumi/50">
                                             {t(voice.labelSub, lang)}
                                         </span>
                                     </div>
                                     <div className="relative pl-4 border-l-2 border-kaede/30">
-                                        <p className="text-sm sm:text-base text-sumi/80 leading-relaxed">
+                                        <p className="text-base sm:text-lg text-sumi/80 leading-relaxed">
                                             「{t(voice.text, lang)}」
                                         </p>
                                     </div>

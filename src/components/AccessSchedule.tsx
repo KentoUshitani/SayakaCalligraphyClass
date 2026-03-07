@@ -46,17 +46,17 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-6xl mx-auto">
                 <AnimatedSection className="text-center mb-12 sm:mb-16">
-                    <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                    <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-sumi">
                         {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
 
                 {/* Regular Classrooms with Maps */}
                 <AnimatedSection className="mb-12 sm:mb-16">
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-sumi mb-6 sm:mb-8 flex items-center gap-2">
+                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-sumi mb-6 sm:mb-8 flex items-center gap-2">
                         <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-kaede" />
                         {t(s.regular, lang)}
                     </h3>
@@ -78,19 +78,19 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
                                 </div>
                                 {/* Info */}
                                 <div className="p-4 sm:p-5 space-y-2">
-                                    <h4 className="text-lg sm:text-xl font-serif font-bold text-sumi">
+                                    <h4 className="text-xl sm:text-2xl font-serif font-bold text-sumi">
                                         {classroom.name}
                                     </h4>
                                     <a
                                         href={classroom.mapLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-xs sm:text-sm text-kaede hover:text-kaede/80 transition-colors duration-300 flex items-start gap-1"
+                                        className="text-sm sm:text-base text-kaede hover:text-kaede/80 transition-colors duration-300 flex items-start gap-1"
                                     >
                                         <ExternalLink className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
                                         <span>{classroom.address}</span>
                                     </a>
-                                    <p className="text-xs sm:text-sm text-sumi/60">
+                                    <p className="text-sm sm:text-base text-sumi/60">
                                         {lang === 'ja' ? classroom.schedule : classroom.scheduleEn}
                                     </p>
                                 </div>
@@ -101,12 +101,12 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
 
                 {/* Irregular Classrooms */}
                 <AnimatedSection className="mb-10 sm:mb-12">
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-sumi mb-6 sm:mb-8 flex items-center gap-2">
+                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-sumi mb-6 sm:mb-8 flex items-center gap-2">
                         <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-kaede" />
                         {t(s.irregular, lang)}
                     </h3>
                     <div className="bg-kinari-dark rounded-lg p-6 sm:p-8">
-                        <p className="text-sm sm:text-base text-sumi/70 mb-5">
+                        <p className="text-base sm:text-lg text-sumi/70 mb-5">
                             {t(s.irregularNote, lang)}
                         </p>
                         <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
@@ -114,7 +114,7 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
                                 <div key={index} className="flex items-start gap-2">
                                     <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0 mt-2"></span>
                                     <div>
-                                        <span className="text-sm sm:text-base font-medium text-sumi">
+                                        <span className="text-base sm:text-lg font-medium text-sumi">
                                             {classroom.name}
                                         </span>
                                         {classroom.mapLink ? (
@@ -122,12 +122,12 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
                                                 href={classroom.mapLink}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-xs sm:text-sm text-kaede hover:text-kaede/80 transition-colors duration-300 ml-1"
+                                                className="text-sm sm:text-base text-kaede hover:text-kaede/80 transition-colors duration-300 ml-1"
                                             >
                                                 （{classroom.address}）
                                             </a>
                                         ) : (
-                                            <span className="text-xs sm:text-sm text-sumi/50 ml-1">
+                                            <span className="text-sm sm:text-base text-sumi/50 ml-1">
                                                 （{classroom.address}）
                                             </span>
                                         )}
@@ -140,11 +140,11 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
 
                 {/* External Classrooms */}
                 <AnimatedSection>
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-sumi mb-4 flex items-center gap-2">
+                    <h3 className="text-2xl sm:text-3xl font-serif font-bold text-sumi mb-4 flex items-center gap-2">
                         <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-kaede" />
                         {t(s.external, lang)}
                     </h3>
-                    <p className="text-sm sm:text-base text-sumi/70">
+                    <p className="text-base sm:text-lg text-sumi/70">
                         {t(s.externalList, lang)}
                     </p>
                 </AnimatedSection>

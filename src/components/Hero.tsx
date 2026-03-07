@@ -23,11 +23,11 @@ export default function Hero({ lang = 'ja' as Lang }) {
                 >
                     {/* Main Catchphrase */}
                     <div className="space-y-4 sm:space-y-6">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-sumi leading-tight">
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-sumi leading-tight">
                             {t(s.title1, lang)}<br />
                             {t(s.title2, lang)}
                         </h1>
-                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-kaede leading-relaxed">
+                        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-kaede leading-relaxed">
                             {t(s.subtitle1, lang)}<br />
                             {t(s.subtitle2, lang)}
                         </p>
@@ -35,10 +35,10 @@ export default function Hero({ lang = 'ja' as Lang }) {
 
                     {/* Subtitle */}
                     <div className="space-y-3 sm:space-y-4">
-                        <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 font-medium">
+                        <p className="text-xl sm:text-2xl md:text-3xl text-sumi/80 font-medium">
                             {t(s.schoolName, lang)}
                         </p>
-                        <p className="text-base sm:text-lg md:text-xl text-sumi/60 leading-relaxed">
+                        <p className="text-lg sm:text-xl md:text-2xl text-sumi/60 leading-relaxed">
                             <TB text={s.desc} lang={lang} />
                         </p>
                     </div>
@@ -51,13 +51,13 @@ export default function Hero({ lang = 'ja' as Lang }) {
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
                         <div className="bg-white/80 backdrop-blur-sm border-2 border-kaede/30 rounded-xl px-5 sm:px-8 py-5 sm:py-6 text-center space-y-2.5">
-                            <p className="text-xs sm:text-sm text-sumi/60 font-medium">
+                            <p className="text-sm sm:text-base text-sumi/60 font-medium">
                                 {t(s.campaignLabel, lang)}
                             </p>
-                            <p className="text-lg sm:text-xl font-bold text-kaede">
+                            <p className="text-xl sm:text-2xl font-bold text-kaede">
                                 {t(s.campaignTitle, lang)}
                             </p>
-                            <p className="text-sm sm:text-base text-sumi/80 font-medium leading-relaxed">
+                            <p className="text-base sm:text-lg text-sumi/80 font-medium leading-relaxed">
                                 <TB text={s.campaignDesc} lang={lang} />
                             </p>
                             <div className="pt-1 space-y-1.5">
@@ -68,7 +68,7 @@ export default function Hero({ lang = 'ja' as Lang }) {
                                     href="https://www.nihon-shuji.or.jp/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-block text-xs sm:text-sm text-kaede hover:text-kaede/80 font-medium underline underline-offset-2 transition-colors duration-300"
+                                    className="inline-block text-sm sm:text-base text-kaede hover:text-kaede/80 font-medium underline underline-offset-2 transition-colors duration-300"
                                 >
                                     {t(s.campaignLink, lang)}
                                 </a>
@@ -83,7 +83,7 @@ export default function Hero({ lang = 'ja' as Lang }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-sumi/70 leading-relaxed">
                             <TB text={s.ctaText} lang={lang} />
                         </p>
                         <a href="https://lin.ee/edtrcMJ" className="inline-block">

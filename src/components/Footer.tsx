@@ -16,13 +16,13 @@ export default function Footer({ lang = 'ja' as Lang }) {
                     <div className="text-center space-y-6 sm:space-y-8">
                         {/* Logo and Tagline */}
                         <div className="space-y-3 sm:space-y-4">
-                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold">
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold">
                                 {t(h.logo, lang)}
                             </h3>
-                            <p className="text-xs sm:text-sm md:text-base text-white/60 uppercase tracking-wider">
+                            <p className="text-xs sm:text-base md:text-lg text-white/60 uppercase tracking-wider">
                                 SAYAKA CALLIGRAPHY
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto leading-relaxed">
                                 <TB text={s.tagline} lang={lang} />
                             </p>
                         </div>
@@ -32,7 +32,7 @@ export default function Footer({ lang = 'ja' as Lang }) {
                             href="https://www.instagram.com/sayakaclass0506"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 sm:gap-3 text-base sm:text-lg hover:text-kaede transition-colors duration-300"
+                            className="inline-flex items-center gap-2 sm:gap-3 text-lg sm:text-xl hover:text-kaede transition-colors duration-300"
                         >
                             <Instagram size={22} />
                             <span>@sayakaclass0506</span>
@@ -40,7 +40,7 @@ export default function Footer({ lang = 'ja' as Lang }) {
 
                         {/* LINE CTA Banner */}
                         <div className="space-y-2">
-                            <p className="text-sm sm:text-base text-white/70">
+                            <p className="text-base sm:text-lg text-white/70">
                                 {t(s.lineLabel, lang)}
                             </p>
                             <a href="https://lin.ee/edtrcMJ" className="inline-block">
@@ -57,7 +57,7 @@ export default function Footer({ lang = 'ja' as Lang }) {
                         <div className="w-16 h-px bg-white/30 mx-auto"></div>
 
                         {/* Copyright */}
-                        <p className="text-white/70 text-xs sm:text-sm">
+                        <p className="text-white/70 text-sm sm:text-base">
                             © {new Date().getFullYear()} {t(s.copyright, lang)} All Rights Reserved.
                         </p>
                     </div>

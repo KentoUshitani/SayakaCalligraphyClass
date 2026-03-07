@@ -23,10 +23,10 @@ export default function Philosophy({ lang = 'ja' as Lang }) {
                     <AnimatedSection className="order-1 md:order-2 space-y-6 sm:space-y-8 text-center md:text-left" direction="right">
                         {/* Title */}
                         <div>
-                            <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                            <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                                 {t(s.label, lang)}
                             </p>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi mb-4 leading-tight">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-sumi mb-4 leading-tight">
                                 {t(s.title1, lang)}<br />
                                 <span className="text-kaede">{t(s.titleHighlight, lang)}</span>。
                             </h2>
@@ -36,7 +36,7 @@ export default function Philosophy({ lang = 'ja' as Lang }) {
                         <div className="w-24 h-1 bg-kaede rounded-full mx-auto md:mx-0"></div>
 
                         {/* Content */}
-                        <div className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed space-y-4 sm:space-y-6">
+                        <div className="text-lg sm:text-xl md:text-2xl text-sumi/80 leading-relaxed space-y-4 sm:space-y-6">
                             <p><TB text={s.p1} lang={lang} /></p>
                             <p><TB text={s.p2} lang={lang} /></p>
                         </div>

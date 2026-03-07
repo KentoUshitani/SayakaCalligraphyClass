@@ -16,10 +16,10 @@ export default function FAQ({ lang = 'ja' as Lang }) {
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-kinari-dark">
             <div className="max-w-3xl mx-auto">
                 <AnimatedSection className="text-center mb-12 sm:mb-16">
-                    <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                    <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-sumi">
                         {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
@@ -32,7 +32,7 @@ export default function FAQ({ lang = 'ja' as Lang }) {
                                     onClick={() => toggle(index)}
                                     className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left hover:bg-kinari/50 transition-colors duration-200"
                                 >
-                                    <span className="text-base sm:text-lg font-medium text-sumi flex items-start gap-3">
+                                    <span className="text-lg sm:text-xl font-medium text-sumi flex items-start gap-3">
                                         <span className="text-kaede font-serif font-bold flex-shrink-0">Q.</span>
                                         {t(item.question, lang)}
                                     </span>
@@ -55,7 +55,7 @@ export default function FAQ({ lang = 'ja' as Lang }) {
                                         >
                                             <div className="px-5 sm:px-6 pb-5 sm:pb-6">
                                                 <div className="border-t border-sumi/10 pt-4">
-                                                    <p className="text-sm sm:text-base text-sumi/70 leading-relaxed flex items-start gap-3">
+                                                    <p className="text-base sm:text-lg text-sumi/70 leading-relaxed flex items-start gap-3">
                                                         <span className="text-kaede font-serif font-bold flex-shrink-0">A.</span>
                                                         {t(item.answer, lang)}
                                                     </p>

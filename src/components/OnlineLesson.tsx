@@ -12,10 +12,10 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-4xl mx-auto">
                 <AnimatedSection className="text-center mb-12 sm:mb-16">
-                    <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
+                    <p className="text-base md:text-lg text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
                         {t(s.label, lang)}
                     </p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sumi leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi leading-tight">
                         <TB text={s.title} lang={lang} />
                     </h2>
                 </AnimatedSection>
@@ -23,10 +23,10 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                 {/* Lead Copy */}
                 <AnimatedSection className="mb-12 sm:mb-16">
                     <div className="max-w-3xl mx-auto space-y-5 sm:space-y-6 text-center">
-                        <p className="text-base sm:text-lg text-sumi/70 leading-relaxed">
+                        <p className="text-lg sm:text-xl text-sumi/70 leading-relaxed">
                             {t(s.desc, lang)}
                         </p>
-                        <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
+                        <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 leading-relaxed">
                             <TB text={s.noPC} lang={lang} />
                         </p>
                     </div>
@@ -35,15 +35,15 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                 {/* Pricing */}
                 <AnimatedSection className="mb-12 sm:mb-16">
                     <div className="max-w-xl mx-auto bg-kinari-dark rounded-lg p-6 sm:p-8 shadow-md space-y-4">
-                        <h3 className="text-lg sm:text-xl font-serif font-bold text-sumi text-center mb-2">{t(s.pricingTitle, lang)}</h3>
-                        <ul className="space-y-2 text-sm sm:text-base text-sumi/80">
+                        <h3 className="text-xl sm:text-2xl font-serif font-bold text-sumi text-center mb-2">{t(s.pricingTitle, lang)}</h3>
+                        <ul className="space-y-2 text-base sm:text-lg text-sumi/80">
                             <li className="flex items-baseline gap-2">
                                 <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0 mt-2"></span>
-                                <span>{t(sv.adult.monthly, lang)}<strong className="text-kaede font-serif text-lg sm:text-xl">{t(sv.adult.monthlyPrice, lang)}</strong></span>
+                                <span>{t(sv.adult.monthly, lang)}<strong className="text-kaede font-serif text-xl sm:text-2xl">{t(sv.adult.monthlyPrice, lang)}</strong></span>
                             </li>
                             <li className="flex items-baseline gap-2">
                                 <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0 mt-2"></span>
-                                <span>{t(sv.adult.single, lang)}<strong className="text-kaede font-serif text-lg sm:text-xl">{t(sv.adult.singlePrice, lang)}</strong>{t(sv.adult.singleNote, lang)}</span>
+                                <span>{t(sv.adult.single, lang)}<strong className="text-kaede font-serif text-xl sm:text-2xl">{t(sv.adult.singlePrice, lang)}</strong>{t(sv.adult.singleNote, lang)}</span>
                             </li>
                             <li className="flex items-baseline gap-2">
                                 <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0 mt-2"></span>
@@ -51,7 +51,7 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                             </li>
                         </ul>
                         <div className="bg-kaede/5 rounded-lg px-4 py-3">
-                            <p className="text-sm sm:text-base text-sumi/80 font-medium">
+                            <p className="text-base sm:text-lg text-sumi/80 font-medium">
                                 <TB text={sv.adult.parentDiscount} lang={lang} /><strong className="text-kaede">{t(sv.adult.parentPrice, lang)}</strong>
                                 {lang === 'ja' ? 'に' : ''}
                             </p>
@@ -59,7 +59,7 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                                 {t(sv.adult.parentNote, lang)}
                             </p>
                         </div>
-                        <div className="text-xs sm:text-sm text-sumi/50 space-y-1">
+                        <div className="text-sm sm:text-base text-sumi/50 space-y-1">
                             <p>{t(sv.adult.note1, lang)}</p>
                             <p>{t(sv.adult.note2, lang)}</p>
                         </div>
@@ -76,13 +76,13 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                                     <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto bg-kaede/10 rounded-full flex items-center justify-center">
                                         <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-kaede" />
                                     </div>
-                                    <p className="text-xs sm:text-sm text-kaede font-bold tracking-widest">
+                                    <p className="text-sm sm:text-base text-kaede font-bold tracking-widest">
                                         STEP {String(index + 1).padStart(2, '0')}
                                     </p>
-                                    <h3 className="text-lg sm:text-xl font-serif font-bold text-sumi">
+                                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-sumi">
                                         {t(item.title, lang)}
                                     </h3>
-                                    <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                                    <p className="text-base sm:text-lg text-sumi/70 leading-relaxed">
                                         {t(item.description, lang)}
                                     </p>
                                 </div>
@@ -94,7 +94,7 @@ export default function OnlineLesson({ lang = 'ja' as Lang }) {
                 {/* LINE CTA */}
                 <AnimatedSection className="text-center mt-10 sm:mt-12">
                     <div className="space-y-3">
-                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-sumi/70 leading-relaxed">
                             <TB text={s.cta} lang={lang} />
                         </p>
                         <a href="https://lin.ee/edtrcMJ" className="inline-block">
