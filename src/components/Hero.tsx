@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { translations, t, type Lang } from '../i18n/utils';
 
-export default function Hero() {
+export default function Hero({ lang = 'ja' as Lang }) {
+    const s = translations.hero;
+
     return (
         <section className="relative min-h-screen pt-24 pb-16 px-4 sm:px-6 flex items-center justify-center overflow-hidden">
             {/* Background with subtle gradient */}
@@ -21,23 +24,22 @@ export default function Hero() {
                     {/* Main Catchphrase */}
                     <div className="space-y-4 sm:space-y-6">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-sumi leading-tight">
-                            字が整うと、<br />
-                            心も整う。
+                            {t(s.title1, lang)}<br />
+                            {t(s.title2, lang)}
                         </h1>
                         <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-kaede leading-relaxed">
-                            あなたの内にある輝きを、<br />
-                            筆に乗せて。
+                            {t(s.subtitle1, lang)}<br />
+                            {t(s.subtitle2, lang)}
                         </p>
                     </div>
 
                     {/* Subtitle */}
                     <div className="space-y-3 sm:space-y-4">
                         <p className="text-lg sm:text-xl md:text-2xl text-sumi/80 font-medium">
-                            清楓習字教室
+                            {t(s.schoolName, lang)}
                         </p>
-                        <p className="text-base sm:text-lg md:text-xl text-sumi/60 leading-relaxed">
-                            指導歴30年。兵庫県内12教室。<br />
-                            清楓（さやか）習字教室へようこそ。
+                        <p className="text-base sm:text-lg md:text-xl text-sumi/60 leading-relaxed whitespace-pre-line">
+                            {t(s.desc, lang)}
                         </p>
                     </div>
 
@@ -50,23 +52,17 @@ export default function Hero() {
                     >
                         <div className="bg-white/80 backdrop-blur-sm border-2 border-kaede/30 rounded-xl px-5 sm:px-8 py-5 sm:py-6 text-center space-y-2.5">
                             <p className="text-xs sm:text-sm text-sumi/60 font-medium">
-                                ＼ 日本最大の書道団体「日本習字」／
+                                {t(s.campaignLabel, lang)}
                             </p>
                             <p className="text-lg sm:text-xl font-bold text-kaede">
-                                🌸 春の入会キャンペーン実施中 🌸
+                                {t(s.campaignTitle, lang)}
                             </p>
-                            <p className="text-sm sm:text-base text-sumi/80 font-medium leading-relaxed">
-                                今ご入会いただくと
-                                <br />
-                                「習字道具一式（最大8,000円相当）」プレゼント！
-                                <br />
-                                手ぶらでスタートできるチャンスです。
+                            <p className="text-sm sm:text-base text-sumi/80 font-medium leading-relaxed whitespace-pre-line">
+                                {t(s.campaignDesc, lang)}
                             </p>
                             <div className="pt-1 space-y-1.5">
-                                <p className="text-xs text-sumi/50 leading-relaxed">
-                                    ※日本習字にご入会の場合、入会金のほかに会費（手本代）が発生します。
-                                    <br />
-                                    詳細は日本習字の公式サイトをご確認ください。
+                                <p className="text-xs text-sumi/50 leading-relaxed whitespace-pre-line">
+                                    {t(s.campaignNote, lang)}
                                 </p>
                                 <a
                                     href="https://www.nihon-shuji.or.jp/"
@@ -74,7 +70,7 @@ export default function Hero() {
                                     rel="noopener noreferrer"
                                     className="inline-block text-xs sm:text-sm text-kaede hover:text-kaede/80 font-medium underline underline-offset-2 transition-colors duration-300"
                                 >
-                                    日本習字公式サイトはこちら
+                                    {t(s.campaignLink, lang)}
                                 </a>
                             </div>
                         </div>
@@ -87,15 +83,13 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed">
-                            まずはLINEでお気軽にご相談・
-                            <br className="sm:hidden" />
-                            単発レッスン（1回1,500円）のお申し込みを！
+                        <p className="text-sm sm:text-base text-sumi/70 leading-relaxed whitespace-pre-line">
+                            {t(s.ctaText, lang)}
                         </p>
                         <a href="https://lin.ee/edtrcMJ" className="inline-block">
                             <img
                                 src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
-                                alt="友だち追加"
+                                alt={t(s.addFriend, lang)}
                                 height="36"
                                 className="h-9 sm:h-10"
                             />
@@ -113,7 +107,7 @@ export default function Hero() {
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                         <img
                             src="/images/calligraphy-main.jpg"
-                            alt="清楓習字教室 - 講師の書道作品"
+                            alt={t(s.imgAlt, lang)}
                             className="w-full h-auto object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-sumi/10 to-transparent"></div>

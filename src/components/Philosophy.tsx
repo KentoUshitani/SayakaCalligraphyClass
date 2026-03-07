@@ -1,6 +1,9 @@
 import AnimatedSection from './AnimatedSection';
+import { translations, t, type Lang } from '../i18n/utils';
 
-export default function Philosophy() {
+export default function Philosophy({ lang = 'ja' as Lang }) {
+    const s = translations.philosophy;
+
     return (
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-6xl mx-auto">
@@ -10,7 +13,7 @@ export default function Philosophy() {
                         <div className="relative rounded-2xl overflow-hidden shadow-xl">
                             <img
                                 src="/calligraphy-workspace.png"
-                                alt="書道用具 - 筆、墨、硯"
+                                alt={t(s.imgAlt, lang)}
                                 className="w-full h-auto object-cover"
                             />
                         </div>
@@ -21,11 +24,11 @@ export default function Philosophy() {
                         {/* Title */}
                         <div>
                             <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
-                                PHILOSOPHY
+                                {t(s.label, lang)}
                             </p>
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi mb-4 leading-tight">
-                                教えるのではなく、<br />
-                                <span className="text-kaede">引き出す</span>。
+                                {t(s.title1, lang)}<br />
+                                <span className="text-kaede">{t(s.titleHighlight, lang)}</span>。
                             </h2>
                         </div>
 
@@ -34,18 +37,8 @@ export default function Philosophy() {
 
                         {/* Content */}
                         <div className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed space-y-4 sm:space-y-6">
-                            <p>
-                                私は技術をただ教えるのではありません。<br />
-                                生徒さん一人ひとりが持っている<br />
-                                「良いもの」に光を当て、<br />
-                                輝かせるのが私の役割です。
-                            </p>
-                            <p>
-                                集中して筆を動かす時間は、<br />
-                                心をリセットし、明日への活力を生みます。<br />
-                                美しい字は一生の財産であり、<br />
-                                何でも挑戦できる「自信」の源になります。
-                            </p>
+                            <p className="whitespace-pre-line">{t(s.p1, lang)}</p>
+                            <p className="whitespace-pre-line">{t(s.p2, lang)}</p>
                         </div>
                     </AnimatedSection>
                 </div>

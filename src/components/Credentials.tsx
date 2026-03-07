@@ -1,43 +1,27 @@
 import { Award, Calendar, GraduationCap } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { translations, t, type Lang } from '../i18n/utils';
 
-const credentials = [
-    {
-        icon: Award,
-        label: '最高段位',
-        value: '八段位',
-        subtitle: '日本習字教育財団',
-    },
-    {
-        icon: Calendar,
-        label: '指導歴',
-        value: '30年以上',
-        subtitle: '指導実績 1000名以上',
-    },
-    {
-        icon: GraduationCap,
-        label: '資格',
-        value: '教授免許',
-        subtitle: '取得済',
-    },
-];
+const icons = [Award, Calendar, GraduationCap];
 
-export default function Credentials() {
+export default function Credentials({ lang = 'ja' as Lang }) {
+    const s = translations.credentials;
+
     return (
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-7xl mx-auto">
                 <AnimatedSection className="text-center mb-12 sm:mb-16">
                     <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
-                        QUALITY ASSURANCE
+                        {t(s.label, lang)}
                     </p>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
-                        実績・信頼
+                        {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-                    {credentials.map((credential, index) => {
-                        const Icon = credential.icon;
+                    {s.items.map((credential, index) => {
+                        const Icon = icons[index];
                         return (
                             <AnimatedSection key={index} delay={index * 0.15}>
                                 <div className="text-center space-y-3 sm:space-y-4 p-6 sm:p-8 rounded-lg bg-kinari-dark hover:bg-kinari transition-colors duration-300">
@@ -45,13 +29,13 @@ export default function Credentials() {
                                         <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-kaede" />
                                     </div>
                                     <p className="text-xs sm:text-sm text-sumi/60 font-medium uppercase tracking-wide">
-                                        {credential.label}
+                                        {t(credential.label, lang)}
                                     </p>
                                     <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-kaede">
-                                        {credential.value}
+                                        {t(credential.value, lang)}
                                     </p>
                                     <p className="text-xs sm:text-sm text-sumi/70">
-                                        {credential.subtitle}
+                                        {t(credential.subtitle, lang)}
                                     </p>
                                 </div>
                             </AnimatedSection>

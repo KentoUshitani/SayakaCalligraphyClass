@@ -1,15 +1,18 @@
 import AnimatedSection from './AnimatedSection';
+import { translations, t, type Lang } from '../i18n/utils';
 
-export default function Instructor() {
+export default function Instructor({ lang = 'ja' as Lang }) {
+    const s = translations.instructor;
+
     return (
         <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
             <div className="max-w-5xl mx-auto">
                 <AnimatedSection className="text-center mb-10 sm:mb-12">
                     <p className="text-sm md:text-base text-kaede font-medium tracking-widest uppercase mb-3 sm:mb-4">
-                        INSTRUCTOR
+                        {t(s.label, lang)}
                     </p>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sumi">
-                        講師紹介
+                        {t(s.title, lang)}
                     </h2>
                 </AnimatedSection>
 
@@ -21,7 +24,7 @@ export default function Instructor() {
                                 <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg">
                                     <img
                                         src="/images/instructor-new.jpg"
-                                        alt="講師 牛谷日出心"
+                                        alt={t(s.imgAlt, lang)}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -34,48 +37,32 @@ export default function Instructor() {
                         <div className="md:col-span-3 text-center md:text-left space-y-5 sm:space-y-6">
                             <div>
                                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-sumi">
-                                    牛谷 日出心
+                                    {t(s.name, lang)}
                                 </h3>
-                                <p className="text-lg sm:text-xl text-sumi/50 mt-1">Ushitani Hideko</p>
+                                {t(s.nameRomaji, lang) && (
+                                    <p className="text-lg sm:text-xl text-sumi/50 mt-1">{t(s.nameRomaji, lang)}</p>
+                                )}
                             </div>
 
                             <div className="w-16 h-0.5 bg-kaede rounded-full mx-auto md:mx-0"></div>
 
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
-                                「先生、昔から字がお上手だったんでしょう？」<br />
-                                よくそう聞かれますが、実は小学生の頃は<br />
-                                「字が雑」と怒られるような子供でした。
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
+                                {t(s.p1, lang)}
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
-                                転機は小学3年生。教室で「上手だね」と<br />
-                                褒められたことで自信がつき、<br />
-                                性格まで明るくなりました。
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
+                                {t(s.p2, lang)}
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed">
-                                指導歴30年。私が大切にしているのは<br />
-                                「教えるのではなく、引き出す」こと。<br />
-                                ダメなところを直すのではなく、<br />
-                                その人だけが持つ「良いところ」を見つけ、<br />
-                                光を当てるのが私の役目です。
+                            <p className="text-base sm:text-lg md:text-xl text-sumi/80 leading-relaxed whitespace-pre-line">
+                                {t(s.p3, lang)}
                             </p>
 
                             <ul className="space-y-2 text-sm sm:text-base text-sumi/70">
-                                <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0"></span>
-                                    日本習字教育財団 八段位
-                                </li>
-                                <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0"></span>
-                                    教授免許取得
-                                </li>
-                                <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0"></span>
-                                    兵庫県内12教室を運営
-                                </li>
-                                <li className="flex items-center gap-2 justify-center md:justify-start">
-                                    <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0"></span>
-                                    指導実績1000名以上
-                                </li>
+                                {[s.cred1, s.cred2, s.cred3, s.cred4].map((cred, i) => (
+                                    <li key={i} className="flex items-center gap-2 justify-center md:justify-start">
+                                        <span className="w-1.5 h-1.5 bg-kaede rounded-full flex-shrink-0"></span>
+                                        {t(cred, lang)}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>

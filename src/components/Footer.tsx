@@ -1,7 +1,11 @@
 import { Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { translations, t, type Lang } from '../i18n/utils';
 
-export default function Footer() {
+export default function Footer({ lang = 'ja' as Lang }) {
+    const s = translations.footer;
+    const h = translations.header;
+
     return (
         <footer className="relative bg-sumi text-white py-12 sm:py-16 px-4 sm:px-6 overflow-hidden">
             {/* Decorative top line */}
@@ -13,15 +17,13 @@ export default function Footer() {
                         {/* Logo and Tagline */}
                         <div className="space-y-3 sm:space-y-4">
                             <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold">
-                                清楓習字教室
+                                {t(h.logo, lang)}
                             </h3>
                             <p className="text-xs sm:text-sm md:text-base text-white/60 uppercase tracking-wider">
                                 SAYAKA CALLIGRAPHY
                             </p>
-                            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-                                字を書くと、心は「無」になる。<br />
-                                気持ちがスッキリと、<br />
-                                前向きになれる場所。
+                            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
+                                {t(s.tagline, lang)}
                             </p>
                         </div>
 
@@ -36,12 +38,27 @@ export default function Footer() {
                             <span>@sayakaclass0506</span>
                         </a>
 
+                        {/* LINE CTA Banner */}
+                        <div className="space-y-2">
+                            <p className="text-sm sm:text-base text-white/70">
+                                {t(s.lineLabel, lang)}
+                            </p>
+                            <a href="https://lin.ee/edtrcMJ" className="inline-block">
+                                <img
+                                    src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+                                    alt={t(translations.common.addFriend, lang)}
+                                    height="36"
+                                    className="h-9 sm:h-10"
+                                />
+                            </a>
+                        </div>
+
                         {/* Divider */}
                         <div className="w-16 h-px bg-white/30 mx-auto"></div>
 
                         {/* Copyright */}
                         <p className="text-white/70 text-xs sm:text-sm">
-                            © {new Date().getFullYear()} 清楓習字教室 All Rights Reserved.
+                            © {new Date().getFullYear()} {t(s.copyright, lang)} All Rights Reserved.
                         </p>
                     </div>
                 </AnimatedSection>
