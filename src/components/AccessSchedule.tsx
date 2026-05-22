@@ -5,27 +5,27 @@ import { translations, t, type Lang } from '../i18n/utils';
 const regularClassrooms = [
     {
         name: '波賀教室',
-        address: '兵庫県宍粟市波賀町皆木443-1',
+        address: '〒671-4216 兵庫県宍粟市波賀町皆木443-1',
         schedule: '毎週水曜：10-12時 / 15-17時',
         scheduleEn: 'Wed: 10–12 / 15–17',
         mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.5!2d134.5563!3d35.1611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5YWl6LOA55S65rOi6LOA55S655qG5pyo!5e0!3m2!1sja!2sjp!4v1!5m2!1sja!2sjp',
-        mapLink: 'https://www.google.com/maps/search/兵庫県宍粟市波賀町皆木443-1',
+        mapLink: 'https://www.google.com/maps/search/〒671-4216 兵庫県宍粟市波賀町皆木443-1',
     },
     {
         name: '山崎教室',
-        address: '兵庫県宍粟市山崎町須賀沢1140-1 cafeきゃんてぃーん2階',
+        address: '〒671-2564 兵庫県宍粟市山崎町青木717　（株式会社 栗山化成工業所敷地内）',
         schedule: '毎週火曜：16-17時 幼児部 / 17-18時 小学部 / 18-19時 中学部',
         scheduleEn: 'Tue: 16–17 Pre / 17–18 Elem / 18–19 Jr High',
-        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.5!2d134.5563!3d35.0611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zcafe%E3%81%8D%E3%82%83%E3%82%93%E3%81%A6%E3%81%83%E3%83%BC%E3%82%93!5e0!3m2!1sja!2sjp!4v1!5m2!1sja!2sjp',
-        mapLink: 'https://www.google.com/maps/search/兵庫県宍粟市山崎町須賀沢1140-1',
+        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.817453707798!2d134.4877356!3d35.0362964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355504309d749c27%3A0x8a2f5438e40f31d3!2z44CSNjcxLTI1NjQg5YW15bqr55yM5a6N57Kf5biC5bGx5bSO55S66Z2S5pyo77yX77yR77yX!5e0!3m2!1sja!2sjp!4v1779448077971!5m2!1sja!2sjp',
+        mapLink: 'https://www.google.com/maps/search/〒671-2564 兵庫県宍粟市山崎町青木717',
     },
     {
         name: 'はこプラス教室',
-        address: '兵庫県姫路市岡田333-1',
+        address: '〒670-0982 兵庫県姫路市岡田333-1',
         schedule: '月3回土曜：10-12時',
         scheduleEn: '3x/month Sat: 10–12',
-        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.5!2d134.6563!3d34.8611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5aeT6Lev5biC5bKh55Sw!5e0!3m2!1sja!2sjp!4v1!5m2!1sja!2sjp',
-        mapLink: 'https://www.google.com/maps/search/兵庫県姫路市岡田333-1',
+        mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.2056493053447!2d134.66367721744382!3d34.825921600000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554e133da2ff663%3A0xe1079911419e94d2!2z44Os44Oz44K_44Or44K544Oa44O844K5IOOBr-OBk-ODl-ODqeOCuQ!5e0!3m2!1sja!2sjp!4v1779448569015!5m2!1sja!2sjp',
+        mapLink: 'https://www.google.com/maps/search/〒670-0982 兵庫県姫路市岡田333-1',
     },
 ];
 
@@ -64,7 +64,7 @@ export default function AccessSchedule({ lang = 'ja' as Lang }) {
                         {regularClassrooms.map((classroom, index) => (
                             <div key={index} className="bg-kinari-dark rounded-lg overflow-hidden shadow-md">
                                 {/* Map Embed */}
-                                <div className="aspect-[4/2.5]">
+                                <div className="h-48 sm:h-64 lg:h-auto lg:aspect-[4/2.5]">
                                     <iframe
                                         src={classroom.mapSrc}
                                         width="100%"
