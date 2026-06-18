@@ -32,7 +32,6 @@ const regularClassrooms = [
 const irregularClassrooms = [
     { name: '新宮教室', address: 'たつの市新宮町上笹1182', mapLink: 'https://www.google.com/maps/search/たつの市新宮町上笹1182' },
     { name: '神河教室', address: '神崎郡神河町寺前64', mapLink: 'https://www.google.com/maps/search/神崎郡神河町寺前64' },
-    { name: 'ポラリス教室', address: '姫路市相野86-6', mapLink: 'https://www.google.com/maps/search/姫路市相野86-6' },
     { name: 'たつの教室', address: '個人宅', mapLink: '' },
     { name: '明石教室', address: '個人宅', mapLink: '' },
     { name: '文殊荘教室', address: '神崎郡福崎町東田原1891', mapLink: 'https://www.google.com/maps/search/神崎郡福崎町東田原1891' },
